@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  week: 1
+  inj_week: 1
+  inj_playerid: 1
+  inj_playername: MyString
+  inj_team: MyString
+  inj_position: MyString
+  inj_injury: MyString
+  inj_prac_status: MyString
+  inj_gamestatus: MyString
+  inj_notes: MyString
+  inj_lastupdate: 2014-09-15
+  inj_prac_status_id: MyString
+
+two:
+  week: 1
+  inj_week: 1
+  inj_playerid: 1
+  inj_playername: MyString
+  inj_team: MyString
+  inj_position: MyString
+  inj_injury: MyString
+  inj_prac_status: MyString
+  inj_gamestatus: MyString
+  inj_notes: MyString
+  inj_lastupdate: 2014-09-15
+  inj_prac_status_id: MyString

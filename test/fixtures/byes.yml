@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  team: MyString
+  byeweek: MyString
+  displayname: MyString
+
+two:
+  team: MyString
+  byeweek: MyString
+  displayname: MyString

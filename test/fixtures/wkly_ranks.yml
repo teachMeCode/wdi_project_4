@@ -1,0 +1,41 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  week: 1
+  ppr: 1
+  position: MyString
+  rnk_week: 1
+  rnk_playerid: 1
+  rnk_name: MyString
+  rnk_position: MyString
+  rnk_team: MyString
+  rnk_standard: 1.5
+  rnk_standlow: 1.5
+  rnk_standhigh: 1.5
+  rnk_ppr: 1.5
+  rnk_pprlow: 1.5
+  rnk_pprhigh: 1.5
+  rnk_injury: MyString
+  rnk_pracstatus: MyString
+  rnk_gamestatus: MyString
+  rnk_lastupdate: 2014-09-15
+
+two:
+  week: 1
+  ppr: 1
+  position: MyString
+  rnk_week: 1
+  rnk_playerid: 1
+  rnk_name: MyString
+  rnk_position: MyString
+  rnk_team: MyString
+  rnk_standard: 1.5
+  rnk_standlow: 1.5
+  rnk_standhigh: 1.5
+  rnk_ppr: 1.5
+  rnk_pprlow: 1.5
+  rnk_pprhigh: 1.5
+  rnk_injury: MyString
+  rnk_pracstatus: MyString
+  rnk_gamestatus: MyString
+  rnk_lastupdate: 2014-09-15

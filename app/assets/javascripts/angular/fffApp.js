@@ -1,0 +1,1 @@
+var fffApp = angular.module('fffApp',[]);

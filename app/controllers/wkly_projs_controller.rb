@@ -1,0 +1,2 @@
+class WklyProjsController < ApplicationController
+end

@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  currentweek: 1
+  schedule_game_id: 1
+  schedule_game_wk: 1
+  schedule_game_date: 2014-09-15
+  schedule_away_team: MyString
+  schedule_home_team: MyString
+  schedule_game_time: MyString
+  schedule_tv: MyString
+  schedule: MyString
+
+two:
+  currentweek: 1
+  schedule_game_id: 1
+  schedule_game_wk: 1
+  schedule_game_date: 2014-09-15
+  schedule_away_team: MyString
+  schedule_home_team: MyString
+  schedule_game_time: MyString
+  schedule_tv: MyString
+  schedule: MyString

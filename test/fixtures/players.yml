@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  playerid: 1
+  active: 1
+  jersey: 1
+  lname: MyString
+  fname: MyString
+  displayname: MyString
+  team: MyString
+  position: MyString
+  height: MyString
+  weight: MyString
+  dob: MyString
+  college: MyString
+
+two:
+  playerid: 1
+  active: 1
+  jersey: 1
+  lname: MyString
+  fname: MyString
+  displayname: MyString
+  team: MyString
+  position: MyString
+  height: MyString
+  weight: MyString
+  dob: MyString
+  college: MyString
