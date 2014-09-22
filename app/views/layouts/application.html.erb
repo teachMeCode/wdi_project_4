@@ -5,54 +5,33 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
-
+    <!-- This should always stay here -->
     <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- ------------------------------------------------------------------ -->
 
-    <script type="text/javascript">
-      google.load('visualization', '1', {packages: ['corechart']});
-    </script>
+<!-- fusion chart -->
 
-    <script type="text/javascript">
+ <script type="text/javascript">
+    // google.load('visualization', '1.1', {packages: ['motionchart']});
+    // function drawVisualization() {
+    //   var queryText = encodeURIComponent("SELECT Year, Austria, Bulgaria, Denmark, Greece FROM 18k8XNgsc5ktLP2EHMCpoKIwymsVlzVV-xVuceA");
+    //   google.visualization.drawChart({
+    //     "containerId": "visualization_div",
+    //     "dataSourceUrl": 'https://www.google.com/fusiontables/gvizdata?tq=',
+    //     "query":"select 'name', 'season', 'team', 'pos', 'passing_att', 'passing_cmp', 'passing_ints', 'passing_yds', 'passing_tds' from 1vmUJcm_ge6dDKpoLG_i43RvVHAf5kdeAHj4FkLt2 where pos = 'QB'  AND passing_att >= 0 limit 500",
+    //     "refreshInterval": 0,
+    //     "chartType": "MotionChart",
+    //     "options": {
+    //       "width": 800,
+    //       "height": 400,
+    //       "showHeader": true  
+    //     }
+    //   });
+    // }
 
-      function drawVisualization() {
-      // Create and populate the data table.
-      var data = google.visualization.arrayToDataTable([
-      ['Age', 'Male', 'Female', 'Both Sexes'],
-      ['Under 5 years',    94100,       91787,         185887],
-      ['5 to 9 years',     84122,       81955,         166077],
-      ['10 to 14 years',   83274,       81192,         164466],
-      ['15 to 19 years',   91528,       91405,         182933],
-      ['20 to 24 years',   108407,      114620,        223027],
-      ['25 to 29 years',   134931,      141208,        276139],
-      ['30 to 34 years',   119828,      119584,        239412],
-      ['35 to 39 years',   100651,      99857,         200508],
-      ['40 to 44 years',   89957,       87674,         177631],
-      ['45 to 49 years',   85645,       86217,         171862],
-      ['50 to 54 years',   80838,       86037,         166875],
-      ['55 to 59 years',   68441,       76170,         144611],
-      ['60 to 64 years',   54592,       63646,         118238],
-      ['65 to 69 years',   37704,       47366,         85070],
-      ['70 to 74 years',   27787,       38238,         66025],
-      ['75 to 79 years',   20448,       30252,         50700],
-      ['80 to 84 years',   14637,       24467,         39104],
-      ['85 to 89 years',   7842,        16548,         24390],
-      ['90 years and over',3340,        9303,          12643]
-      ]);
-
-      // Create and draw the visualization.
-      new google.visualization.AreaChart(document.getElementById('visualization')).
-        draw(data, {curveType: "function",
-                    width: 600, height: 400,
-                    title:'Chicago Population by Age and Gender - 2010 Census',
-                    vAxis: {title: 'Population'},
-                    hAxis: {title: 'Age Groups'}
-             }
-            );
-      }
-
-      google.setOnLoadCallback(drawVisualization);
-
-    </script>
+    // google.setOnLoadCallback(drawVisualization);
+  </script>
   </head>
 
   <body>
@@ -60,19 +39,39 @@
     <%= render 'layouts/nav' %> 
 
     <div ng-app="fffApp">
-  <div ng-controller="fff">
+    <div ng-controller="fff">
 
-<div class="container-fluid">
-  <h1>Something here</h1>
-  <p>Is bootstrap workings</p>
-
-  <div id="visualization" style="width: 500px; height: 400px;"></div>
-  <br/>
-  <div id="visualization1" style="width: 1200px; height: 500px;"></div>
-  
-</div> <!-- End of container -->
-</div>
-</div> 
+    <!-- <div class="container-fluid"> -->
+    <!-- sidebar -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+            <li class="active"><a href="localhost:3000/home">Overview</a></li>
+            <li><a href="localhost:3000/players">Reports</a></li>
+            <li><a href="#">Quarterback</a></li>
+            <li><a href="#">Running Back</a></li>
+          </ul>
+          <ul class="nav nav-sidebar">
+            <li><a href="">Wide Receiver</a></li>
+            <li><a href="">Tight End</a></li>
+            <li><a href="">Defense / Special Teams</a></li>
+            <li><a href="">Kicker</a></li>  
+          </ul>
+          <ul class="nav nav-sidebar">
+          </ul> <!-- end of sidebar -->
+        </div>
+        <div class="col-md-10">
+<!--           <div id="visualization" style="width: 500px; height: 400px;"></div>
+          <br/>
+          <div id="chart_div" style="width: 1000px; height: 500px;"></div>
+          <br/> -->
+          <!--div id="visualization_div" style="width: 1000px; height: 1000px;"></div-->
+<!--           <br/>
+          <div id="visualization2"></div> -->
+        </div>  
+    </div> <!-- end of row -->
+  </div> <!-- End of container -->
     <%= yield %>
 
     <%= render 'layouts/footer' %>
