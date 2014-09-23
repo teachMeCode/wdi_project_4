@@ -2,16 +2,15 @@
 
 <div class="container">
   <div class="row">
-    <h1>Running Backs</h1>
   </div>
   <script type="text/javascript">
   google.load('visualization', '1.1', {packages: ['motionchart']});
   function drawVisualization() {
-    var queryText = encodeURIComponent("select season,team,sum(defense_ast) as defense_ast, sum(defense_ffum) defense_ffum, sum(defense_int) defense_int, sum(defense_sk) defense_sk, sum(defense_tkl) defense_tkl, sum(fumbles_lost)fumbles_lost, sum(fumbles_rcv) fumbles_rcv, sum(fumbles_tot) fumbles_tot, sum(fumbles_trcv) fumbles_trcv, sum(fumbles_yds) fumbles_yds from 1vmUJcm_ge6dDKpoLG_i43RvVHAf5kdeAHj4FkLt2 where pos in ('DE', 'CB', 'OLB', 'DT', 'FS', 'SS', 'ILB', 'LB', 'DB', 'MLB') group by 1,2");
+    var queryText = encodeURIComponent("select team, season, defense_ast, defense_ffum, defense_int, defense_sk, defense_tkl, fumbles_lost, fumbles_rcv, fumbles_tot, fumbles_trcv, fumbles_yds from 1vmUJcm_ge6dDKpoLG_i43RvVHAf5kdeAHj4FkLt2 where pos in ('DE', 'CB', 'OLB', 'DT', 'FS', 'SS', 'ILB', 'LB', 'DB', 'MLB')");
     google.visualization.drawChart({
       "containerId": "visualization_div",
       "dataSourceUrl": 'https://www.google.com/fusiontables/gvizdata?tq=',
-      "query":"select season,team,sum(defense_ast) as defense_ast, sum(defense_ffum) defense_ffum, sum(defense_int) defense_int, sum(defense_sk) defense_sk, sum(defense_tkl) defense_tkl, sum(fumbles_lost)fumbles_lost, sum(fumbles_rcv) fumbles_rcv, sum(fumbles_tot) fumbles_tot, sum(fumbles_trcv) fumbles_trcv, sum(fumbles_yds) fumbles_yds from 1vmUJcm_ge6dDKpoLG_i43RvVHAf5kdeAHj4FkLt2 where pos in ('DE', 'CB', 'OLB', 'DT', 'FS', 'SS', 'ILB', 'LB', 'DB', 'MLB') group by 1,2",
+      "query":"select team, season, defense_ast, defense_ffum, defense_int, defense_sk, defense_tkl, fumbles_lost, fumbles_rcv, fumbles_tot, fumbles_trcv, fumbles_yds from 1vmUJcm_ge6dDKpoLG_i43RvVHAf5kdeAHj4FkLt2 where pos in ('DE', 'CB', 'OLB', 'DT', 'FS', 'SS', 'ILB', 'LB', 'DB', 'MLB')",
       "refreshInterval": 0,
       "chartType": "MotionChart",
       "options": {
@@ -29,4 +28,4 @@
 </script>
 </div>
 
-<div id="visualization_div" style="width: 1000px; height: 1000px;"></div>
+<div id="visualization_div" style="width: 800px; height: 400px;"></div>

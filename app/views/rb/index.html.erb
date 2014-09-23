@@ -2,31 +2,36 @@
 
 <div class="container">
   <div class="row">
-    <h1>Running Backs</h1>
   </div>
-  <script type="text/javascript">
-  google.load('visualization', '1.1', {packages: ['motionchart']});
-  function drawVisualization() {
-    var queryText = encodeURIComponent("select 'name', 'season', 'team', 'pos', 'rushing_att', 'rushing_lng', 'rushing_lngtd', 'rushing_tds', 'rushing_yds', fumbles_lost, fumbles_tot from 1vmUJcm_ge6dDKpoLG_i43RvVHAf5kdeAHj4FkLt2 where pos = 'RB'  AND rushing_att >= 0 limit 500");
-    google.visualization.drawChart({
-      "containerId": "visualization_div",
-      "dataSourceUrl": 'https://www.google.com/fusiontables/gvizdata?tq=',
-      "query":"select 'name', 'season', 'team', 'pos', 'rushing_att', 'rushing_lng', 'rushing_lngtd', 'rushing_tds', 'rushing_yds', fumbles_lost, fumbles_tot from 1vmUJcm_ge6dDKpoLG_i43RvVHAf5kdeAHj4FkLt2 where pos = 'RB'  AND rushing_att >= 0 limit 500",
-      "refreshInterval": 0,
-      "chartType": "MotionChart",
-      "options": {
-        "width": 800,
-        "height": 400,
-        "showHeader": true  
-      }
-    });
-  }
+    <div class="row">
+<!--       <div class="col-md-2">
+      </div> -->
+      <div class-"col-md-10">
+        <script type="text/javascript">
+        google.load('visualization', '1.1', {packages: ['motionchart']});
+        function drawVisualization() {
+          var queryText = encodeURIComponent("select 'name', 'season', 'team', 'pos', 'rushing_att', 'rushing_lng', 'rushing_lngtd', 'rushing_tds', 'rushing_yds', fumbles_lost, fumbles_tot from 1vmUJcm_ge6dDKpoLG_i43RvVHAf5kdeAHj4FkLt2 where pos = 'RB'  AND rushing_att >= 0 limit 500");
+          google.visualization.drawChart({
+            "containerId": "visualization_div",
+            "dataSourceUrl": 'https://www.google.com/fusiontables/gvizdata?tq=',
+            "query":"select 'name', 'season', 'team', 'pos', 'rushing_att', 'rushing_lng', 'rushing_lngtd', 'rushing_tds', 'rushing_yds', fumbles_lost, fumbles_tot from 1vmUJcm_ge6dDKpoLG_i43RvVHAf5kdeAHj4FkLt2 where pos = 'RB'  AND rushing_att >= 0 limit 500",
+            "refreshInterval": 0,
+            "chartType": "MotionChart",
+            "options": {
+              "width": 800,
+              "height": 400,
+              "showHeader": true  
+            }
+          });
+        }
 
-  //google.setOnLoadCallback(drawVisualization);
-   $(function() {
-    drawVisualization();
-  });
-</script>
+        //google.setOnLoadCallback(drawVisualization);
+         $(function() {
+          drawVisualization();
+        });
+      </script>
+    </div>    
+  </div>    
 </div>
 
-<div id="visualization_div" style="width: 1000px; height: 1000px;"></div>
+<div id="visualization_div" style="width: 800px; height: 400px;"></div>

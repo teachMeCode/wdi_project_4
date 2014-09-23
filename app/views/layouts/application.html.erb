@@ -1,75 +1,45 @@
 <!DOCTYPE html>
   <html>
   <head>
-    <title>WdiProject4</title>
+    <title>fast fantasy football</title>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
-    <!-- This should always stay here -->
+    <!-- Google API - Don't Move -->
     <script type="text/javascript" src="http://www.google.com/jsapi"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-
-    <!-- ------------------------------------------------------------------ -->
-
-<!-- fusion chart -->
-
- <script type="text/javascript">
-    // google.load('visualization', '1.1', {packages: ['motionchart']});
-    // function drawVisualization() {
-    //   var queryText = encodeURIComponent("SELECT Year, Austria, Bulgaria, Denmark, Greece FROM 18k8XNgsc5ktLP2EHMCpoKIwymsVlzVV-xVuceA");
-    //   google.visualization.drawChart({
-    //     "containerId": "visualization_div",
-    //     "dataSourceUrl": 'https://www.google.com/fusiontables/gvizdata?tq=',
-    //     "query":"select 'name', 'season', 'team', 'pos', 'passing_att', 'passing_cmp', 'passing_ints', 'passing_yds', 'passing_tds' from 1vmUJcm_ge6dDKpoLG_i43RvVHAf5kdeAHj4FkLt2 where pos = 'QB'  AND passing_att >= 0 limit 500",
-    //     "refreshInterval": 0,
-    //     "chartType": "MotionChart",
-    //     "options": {
-    //       "width": 800,
-    //       "height": 400,
-    //       "showHeader": true  
-    //     }
-    //   });
-    // }
-
-    // google.setOnLoadCallback(drawVisualization);
-  </script>
   </head>
-
   <body>
-
+    <!-- NAV BAR -->
     <%= render 'layouts/nav' %> 
-
     <div ng-app="fffApp">
     <div ng-controller="fff">
-
-    <!-- <div class="container-fluid"> -->
-    <!-- sidebar -->
+        <!-- sidebar -->
     <div class="container-fluid">
       <div class="row">
-        <div class="col-sm-3 col-md-2 sidebar">
-          <ul class="nav nav-sidebar">
-            <li class="active"><%=link_to 'Overview', home_path %></li>
-            <li><%=link_to 'Quarterback', qb_path %></li>
-            <li><%=link_to 'Running Back', rb_path %></li>
-            <li><%=link_to 'Wide Receiver', wr_path %></li>
-            <li><%=link_to 'Tight End', te_path %></li>
-            <li><%=link_to "Defense / Special Teams", def_path %></li>
-            <li><%=link_to 'Kicker', kkr_path %></li>
+        <div class="col-sm-2 col-md-2 sidebar">
+          <ul class="nav nav-sidebar nav-pills nav-stacked">
+            <!-- <li><#%=link_to 'Overview', home_path %></li> -->
+            <!-- <li><%#=link_to 'Quarterback', qb_path %></li> -->
+            <!-- <li><%#=link_to 'Running Back', rb_path %></li> -->
+            <!-- <li><%#=link_to 'Wide Receiver', wr_path %></li> -->
+            <!-- <li><%#=link_to 'Tight End', te_path %></li> -->
+            <!-- <li><%#=link_to "Defense / Special Teams", def_path %></li> -->
+            <!-- <li><%#=link_to 'Kicker', kkr_path %></li> -->
+            <li class="<%= 'active' if params[:controller] == 'home'%>"><a href="/home">Home</a></li>
+            <li class="<%= 'active' if params[:controller] == 'qb'%>"><a href="/qb">Quarterback</a></li>
+            <li class="<%= 'active' if params[:controller] == 'rb'%>"><a href="/rb">Running Back</a></li>
+            <li class="<%= 'active' if params[:controller] == 'wr'%>"><a href="/wr">Wide Receiver</a></li>
+            <li class="<%= 'active' if params[:controller] == 'te'%>"><a href="/te">Tight End</a></li>
+            <li class="<%= 'active' if params[:controller] == 'def'%>"><a href="/def">Defense / Special Teams</a></li>
+            <li class="<%= 'active' if params[:controller] == 'kkr'%>"><a href="/kkr">Kicker</a></li>
           </ul>
         </div>
         <div class="col-md-10">
           <%= yield %>
-<!--           <div id="visualization" style="width: 500px; height: 400px;"></div>
-          <br/>
-          <div id="chart_div" style="width: 1000px; height: 500px;"></div>
-          <br/> -->
-          <!--div id="visualization_div" style="width: 1000px; height: 1000px;"></div-->
-<!--           <br/>
-          <div id="visualization2"></div> -->
         </div>  
     </div> <!-- end of row -->
   </div> <!-- End of container -->
-    
 
     <%= render 'layouts/footer' %>
 
