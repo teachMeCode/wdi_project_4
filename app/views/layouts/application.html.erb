@@ -8,6 +8,7 @@
     <!-- This should always stay here -->
     <script type="text/javascript" src="http://www.google.com/jsapi"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
     <!-- ------------------------------------------------------------------ -->
 
 <!-- fusion chart -->
@@ -47,21 +48,17 @@
       <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
           <ul class="nav nav-sidebar">
-            <li class="active"><a href="localhost:3000/home">Overview</a></li>
-            <li><a href="localhost:3000/players">Reports</a></li>
-            <li><a href="#">Quarterback</a></li>
-            <li><a href="#">Running Back</a></li>
+            <li class="active"><%=link_to 'Overview', home_path %></li>
+            <li><%=link_to 'Quarterback', qb_path %></li>
+            <li><%=link_to 'Running Back', rb_path %></li>
+            <li><%=link_to 'Wide Receiver', wr_path %></li>
+            <li><%=link_to 'Tight End', te_path %></li>
+            <li><%=link_to "Defense / Special Teams", def_path %></li>
+            <li><%=link_to 'Kicker', kkr_path %></li>
           </ul>
-          <ul class="nav nav-sidebar">
-            <li><a href="">Wide Receiver</a></li>
-            <li><a href="">Tight End</a></li>
-            <li><a href="">Defense / Special Teams</a></li>
-            <li><a href="">Kicker</a></li>  
-          </ul>
-          <ul class="nav nav-sidebar">
-          </ul> <!-- end of sidebar -->
         </div>
         <div class="col-md-10">
+          <%= yield %>
 <!--           <div id="visualization" style="width: 500px; height: 400px;"></div>
           <br/>
           <div id="chart_div" style="width: 1000px; height: 500px;"></div>
@@ -72,7 +69,7 @@
         </div>  
     </div> <!-- end of row -->
   </div> <!-- End of container -->
-    <%= yield %>
+    
 
     <%= render 'layouts/footer' %>
 

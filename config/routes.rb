@@ -3,8 +3,20 @@ Rails.application.routes.draw do
   resources :players, defaults: {format: :json}
   
   get '/home' => 'home#index'
+  root 'home#index'
 
   get '/qb' => 'qb#index'
+
+  get '/rb' => 'rb#index'
+
+  get '/wr' => 'wr#index'
+
+  get '/te' => 'te#index'
+
+  get '/def' => 'def#index'
+
+  get '/kkr' => 'kkr#index'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

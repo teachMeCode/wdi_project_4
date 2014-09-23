@@ -1,17 +1,19 @@
 
 
+
+
 <div class="container">
   <div class="row">
-    <h1>Quarterbacks</h1>
+    <h1>Kicker</h1>
   </div>
   <script type="text/javascript">
     google.load('visualization', '1.1', {packages: ['motionchart']});
     function drawVisualization() {
-      var queryText = encodeURIComponent("select 'name', 'season', 'team', 'pos', 'passing_att', 'passing_cmp', 'passing_ints', 'passing_yds', 'passing_tds' from 1vmUJcm_ge6dDKpoLG_i43RvVHAf5kdeAHj4FkLt2 where pos = 'QB'  AND passing_att >= 0 limit 500");
+      var queryText = encodeURIComponent("select 'name', 'team', 'season',  'kicking_fga', 'kicking_fgm', 'kicking_fgyds', 'kicking_totpfg' from 1vmUJcm_ge6dDKpoLG_i43RvVHAf5kdeAHj4FkLt2 where pos = 'K' and kicking_fga >=0 limit 500");
       google.visualization.drawChart({
         "containerId": "visualization_div",
         "dataSourceUrl": 'https://www.google.com/fusiontables/gvizdata?tq=',
-        "query":"select 'name', 'season', 'team', 'pos', 'passing_att', 'passing_cmp', 'passing_ints', 'passing_yds', 'passing_tds' from 1vmUJcm_ge6dDKpoLG_i43RvVHAf5kdeAHj4FkLt2 where pos = 'QB'  AND passing_att >= 0 limit 500",
+        "query":"select name, season, team, kicking_fga, kicking_fgm, kicking_fgyds, kicking_totpfg from 1vmUJcm_ge6dDKpoLG_i43RvVHAf5kdeAHj4FkLt2 where pos = 'K' and kicking_fga >=0 limit 500",
         "refreshInterval": 0,
         "chartType": "MotionChart",
         "options": {
@@ -22,7 +24,7 @@
       });
     }
 
-  //redraw chart on page
+  //redraw chart on page load
   //google.setOnLoadCallback(drawVisualization);
   $(function() {
     drawVisualization();
@@ -30,6 +32,6 @@
 </script>
 </div>
 
-<div id="visualization_div" style="width: 800px; height: 400px;"></div>
+<div id="visualization_div" style="width: 1000px; height: 1000px;"></div>
 
 
