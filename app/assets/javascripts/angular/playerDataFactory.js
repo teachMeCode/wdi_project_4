@@ -8,7 +8,7 @@ fffApp.factory('PlayerData', ['$http', function($http){
   //  return $http({ method: 'GET', url: endpoint });
   //};
 
-  // Turning the player function off until it can be built out further
+  // !!! Turning the player function off until it can be built out further
 
   //return player;
 

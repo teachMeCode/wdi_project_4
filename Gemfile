@@ -31,6 +31,10 @@ gem 'spring',        group: :development
 #
 gem 'rails_12factor', group: :production
 
+group :development, :test do
+  gem 'rspec-rails', '~> 3.0.0'
+end
+
 #football nerd 
 gem 'fantasy_football_nerd'
 
