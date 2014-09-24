@@ -1,6 +1,7 @@
 class PlayersController < ApplicationController
 
-  respond_to :json
+  # Turning off json response until functionality is built out  
+  #respond_to :json
 
   def index
     # Turning off json response until functionality is built out

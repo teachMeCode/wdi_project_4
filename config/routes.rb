@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
   
-  resources :players, defaults: {format: :json}
+  #resources :players, defaults: {format: :json}
   
-  get '/home' => 'home#index'
   root 'home#index'
 
+  get '/home' => 'home#index'
+  
   get '/qb' => 'qb#index'
 
   get '/rb' => 'rb#index'
@@ -17,7 +18,7 @@ Rails.application.routes.draw do
 
   get '/kkr' => 'kkr#index'
 
-  get 'about' => 'about#index'
+  get '/about' => 'about#index'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

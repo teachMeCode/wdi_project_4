@@ -17,13 +17,5 @@
 //= require bootstrap
 //= require_tree .
 
-  // <script type="text/javascript" src="http://www.google.com/jsapi"></script>
-  // <script type="text/javascript">
-  //   google.load('visualization', '1', {packages: ['corechart']});
-  // </script>
-  // <script type="text/javascript">
-  //   google.setOnLoadCallback(drawVisualization);
-
-
-  // </script>
+ 
 
